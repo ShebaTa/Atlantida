@@ -29,15 +29,16 @@ header {
 }
 
 nav {
-    margin: auto;
+    margin: auto auto auto -350px;
 }
 
 nav a {
     color: #b7b7b7;
     text-decoration: none;
     font-size: 1em;
-    padding: 0px 20px 0;
+    padding: 0px 8px 0;
     display: inline-block;
+    font-size: 80%;
 }
 
 nav a:hover {
@@ -79,6 +80,11 @@ section {
     padding-bottom: 30px; 
 }
 
+h3 {
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
 /* .wavy { 
     text-decoration-line: underline overline;
     text-decoration-style: wavy;
@@ -92,7 +98,7 @@ section {
 }
 
 input[type="button"] {
-    background: rgba(255, 255, 255, 0.200);
+    background: none;
     color: white;
     border: 2px solid white;
     width: 150px;
@@ -121,7 +127,7 @@ input[type="button"]:hover {
     background-color: white;
     width: 1170px;
     height: 755px;
-    margin: auto;
+    margin: 75px auto auto auto;
 }
 
 .section-about .image {
@@ -161,9 +167,10 @@ p {
 }
 
 .results {
-    display: table;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     color: #3e3d3d;
-    text-align: center; 
     margin: auto;
     margin-top: 35px;
     margin-bottom: 60px;
@@ -172,38 +179,50 @@ p {
 }
 
 .results ul {
-    display: table-cell;
-    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #b0b0b0;
 }
 
 .results li {
-    display: table-row;
     margin-bottom: 25px;
+    font-weight: bolder;
+    line-height: 20px;
+    list-style-type: none;
+    min-width: 272px;
+}
+
+.results ul:last-child {
+    border-right: none;
+}
+
+.results li:last-child {
+    line-height: 80px;
+    font-size: 47px;
 }
 
 .results .icon_1 {
-    display: inline-block;
     background: url("../images/icon1.png") no-repeat;
     width: 38px;
-    height: 41px;
+    flex-basis: 41px;
 }
 
 .results .icon_2 {
-    display: inline-block;
     background: url("../images/icon2.png") no-repeat;
     width: 41px;
     height: 40px;
 }
 
 .results .icon_3 {
-    display: inline-block;
     background: url("../images/icon3.png") no-repeat;
     width: 33px;
     height: 39px;
 }
 
 .results .icon_4 {
-    display: inline-block;
     background: url("../images/icon4.png") no-repeat;
     width: 41px;
     height: 37px;
@@ -263,11 +282,62 @@ p {
     background-color: #ededed;
 }
 
-.diagram {
-    width: 1171px;
-    height: 1177px;
-    background-image: url("../images/history_diagram.png");
+.common_diagram {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1170px;
     margin: 45px auto;
+    color: #3e3d3d;
+}
+
+.diagram_1 {
+    border: 1px solid #3e3d3d;
+    padding: 26px;
+    max-width: 530px;
+}
+
+div[class^="paragraph-"] {
+    border: 1px solid #3e3d3d;
+    padding: 30px 60px 35px 25px;
+    flex-wrap: wrap;
+}
+
+.diagram_1 .paragraph-1 {
+    margin-bottom: 30px;
+}
+
+[class^="paragraph-"] h2 {
+    text-transform: uppercase;
+}
+
+[class^="paragraph-"] h3 {
+    font-size: 0.9em;
+}
+
+[class^="paragraph-"] p {
+    white-space: pre-line;
+    text-align: left;
+    font-size: smaller;
+}
+
+.diagram_1 .paragraph-2 {
+    margin-bottom: 270px;
+}
+ 
+.diagram_2 {
+    border: 1px solid #3e3d3d;
+    padding: 26px;
+    max-width: 530px;
+}
+
+.diagram_2 .paragraph-1 {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.diagram_2 .paragraph-2 {
+    margin-bottom: 180px;
 }
 
 .section-team {
@@ -288,22 +358,29 @@ p {
     height: 338px;
 }
 
-.member_1 {
-    /* position: relative; */
+.team-members [class^="poster_"] {
+    /* display: none; */
+    
+}
+
+.team-members [class^="poster_"]:hover {
+    display: inline-block;
+    cursor: pointer;
+    width: 256px;
+    height: 320px;
+    background: rgba(237, 237, 237, 0.7);
+    margin: 9px auto;
+}
+
+.photo_1 {
     background-image: url("../images/member-1.png");
 }
 
-.member_1:hover {
-    background: rgba(237, 237, 237, 0.7); 
-    /* position: relative; */
-    cursor: pointer;
-}
-
-.member_2 {
+.photo_2 {
     background-image: url("../images/member-2.png");
 }
 
-.member_3 {
+.photo_3 {
     background-image: url("../images/member-3.png");
 }
 
@@ -322,9 +399,7 @@ p {
 }
 
 .examples {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    
     height: 687px;
     background-color: #222222;
 }
