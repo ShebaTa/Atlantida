@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Amsdam RegularSVG';
+    src: url('Amsdam Regular.svg#Amsdam Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Amsdam RegularTTF';
+    src: url('Amsdam Regular.ttf') format('truetype');
+} 
+
+@font-face {
+    font-family: 'Amsdam RegularEOT';
+    src: url('Amsdam Regular.eot');
+} 

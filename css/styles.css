@@ -258,10 +258,16 @@ p {
     width: 270px;
     border: 2px solid #e3e3e3;
     margin-right: 35px;
+    border-top: none;
 }
 
 .services_boxes article:last-child {
     margin-right: 0px;
+}
+
+.icon-1 {
+    display: block;
+    top: -10px;
 }
 
 .services_boxes h1 {
@@ -389,11 +395,11 @@ p {
     color: #3e3d3d;
 }
 
-[class^="poster_"] dl {
+[class^="poster_"] {
     display: none;
 }
 
-.team-members [class^="poster_"]:hover {
+[class^="photo_"]:hover [class^="poster_"] {
     display: inline-block;
     cursor: pointer;
     width: 256px;
